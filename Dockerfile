@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu
 # RUN groupadd -g 999 appuser && \
 #     useradd -r -u 999 -g appuser appuser
 
@@ -13,4 +13,7 @@ RUN echo 'root:rootpass' | chpasswd
 RUN echo 'somedudeuser:mypass' | chpasswd
 
 USER somedudeuser
+
+WORKDIR /home/somedudeuser
+
 CMD echo $HOME

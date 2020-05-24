@@ -17,7 +17,7 @@ Todo: put these in files and install with pipe to shell interactive
 
 
 ```shellscript
-/bin/sh -c "$(curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_fish.sh)"
+curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_fish.sh | /bin/sh
 ```
 
 
