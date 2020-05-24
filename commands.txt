@@ -1,0 +1,54 @@
+# count unique lines
+your_command | sort -u | wc -l
+
+# group by count
+your_command | sort | uniq -c | sort -nr
+
+# awk select second (or any other) column
+awk '{print $2}'
+
+# awk filter by value
+awk '{ if ($7 == "yourvalue") { print } }'
+
+# search for text in all files in current folder, case-insensitive
+grep -rni your_search_string .
+
+# chromium-headless dump webpage dom to file
+chromium-browser --headless  --disable-gpu --dump-dom https://example.com/ > file.html
+
+# check free disk space
+df -h
+
+# check disk usage per directory, only one level
+du -h --max-depth=1
+
+# remove first line of file
+sed '1d' input_file > output_file
+
+# remove every other line (odd, adjust for even)
+awk 'NR%2==0' file
+
+# create a timestamp-named tarball (fish shell only)
+tar -cvvzf (date "+%Y.%m.%d-%H.%m").tar.gz  source_filename
+
+# connect to mysql database
+mysql -u username -h server_ip_or_host -p db_name
+
+# connect to postgresql database
+psql -h <host> -p <port> -U <username> -W <password> <database>
+
+# replace strings
+sed 's/replace_this/with_this/g'
+
+# trim leading whitespace
+sed 's/^[ \t]*//'
+
+# remove blank lines
+sed '/^$/d'
+
+# create a file with 1000 lines with an integer between 1 and 10 per line
+shuf -i 90-110 -r -n 1000 > file
+
+# HTTP server on specific port for all file in current directory
+python -m SimpleHTTPServer 9000
+
