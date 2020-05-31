@@ -27,7 +27,7 @@ TODO: surround keybind on if fish 3
 ### Z shell
 
 ```shellscript
-curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_zshell.sh | /bin/sh
+curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_zsh.sh | /bin/sh
 ```
 
 

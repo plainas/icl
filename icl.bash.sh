@@ -11,7 +11,7 @@ f_run_icl () {
     icl | f_icl_writecmd
 }
 
-bind '"\C-t":"f_run_icl"'
+bind '"\C-t":"f_run_icl\n"'
 
 #===============================================================================
 # END  icl - interactive command library END
