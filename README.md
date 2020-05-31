@@ -9,25 +9,38 @@ Have your favorite one-liners allways at your fingertips.
 One line installation is provided for convenience, but I encourage you read the
 installation scripts.
 
-### fish shell
-
-This will only work for fish 3. If you use fish 2, you need to setup the keybind yourself
-
-Todo: put these in files and install with pipe to shell interactive
-
+### Fish shell
 
 ```shellscript
 curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_fish.sh | /bin/sh
 ```
 
+Reload your fish config or start a new shell.
 
-### zshel
+Note:
+Iy you are still using fish 2, yon need to define the keybinding to ''f_run_icl'' yourself.
 
-### bash
+
+TODO: surround keybind on if fish 3
+
+
+### Z shell
+
+```shellscript
+curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_zshell.sh | /bin/sh
+```
+
+
+### Bash
+
+```shellscript
+curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_bash.sh | /bin/sh
+```
+
 
 ## usage
 
-Just press Ctrl+t!
+Just press Ctrl+t and start typing.
 
 ## adding commands to your cheat sheet
 
