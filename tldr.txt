@@ -553,21 +553,6 @@ bash -s
 # Print the version information of bash (use `echo $BASH_VERSION` to show just the version string)
 bash --version
 
-# List available bookmarks
-l
-
-# Save the current folder as "bookmark_name"
-s {{bookmark_name}}
-
-# Go to a bookmarked folder
-g {{bookmark_name}}
-
-# Print a bookmarked folder's contents
-p {{bookmark_name}}
-
-# Delete a bookmark
-d {{bookmark_name}}
-
 # Print the contents of a file to the standard output
 bat {{file}}
 

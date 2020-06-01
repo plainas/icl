@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt update
-RUN apt-get install fish sudo curl -y
+RUN apt-get install fish sudo curl zsh -y
 
 
 RUN adduser --disabled-password --gecos "" somedudeuser
