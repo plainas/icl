@@ -4,13 +4,15 @@ icl is a user-friendly, interactive cheat sheet for your UNIX terminal.
 
 Have your favorite one-liners allways at your fingertips.
 
+TODO: add simple video example
+
+TODO: tl dr scrapper
+
 ## Installation
 
 One line installation is provided for convenience, but you are encouraged to read the installation scripts.
 
 ### Fish shell
-
-warning: this works for fish 3 only. Check the manual installation procedure below if you intend to use this with fish 2.
 
 ```shellscript
 curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_fish.sh | /bin/sh
@@ -20,7 +22,6 @@ Reload your fish config or start a new shell.
 
 Note:
 Iy you are still using fish 2, yon need to define the keybinding to ''f_run_icl'' yourself.
-
 
 TODO: surround keybind on if-clause fish 3
 
@@ -35,16 +36,16 @@ reload zsh config or relaunch zsh.
 
 ### Bash
 
-Bash doesn't lent itself to the same level of interactivity and configurability than fish or zsh.
-
-The command below will install a function to launch ''icl'' by pressing ''Ctrl+t'', on your .bashrc .
-The chosen command is places in your input bugger but it is also printed to stdout. This works but
-it is somewhat anoying. If you are bash user, this is good time to switch to fish.
-
 
 ```shellscript
 curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_bash.sh | /bin/sh
 ```
+
+Bash doesn't lend itself to the same level of interactivity and configurability as fish or zsh.
+
+The command below will install a function to launch ''icl'' by pressing ''Ctrl+t'', on your .bashrc .
+The chosen command is placed in your input bugger but it is also printed to stdout. This works but
+it is somewhat anoying. If you are bash user, this is good time to switch to fish.
 
 
 ### Manual Installation
