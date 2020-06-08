@@ -4,9 +4,7 @@ icl is a user-friendly, interactive cheat sheet for your UNIX terminal.
 
 Have your favorite one-liners allways at your fingertips.
 
-TODO: add simple video example
-
-TODO: tl dr scrapper
+![Example](./screencast.svg)
 
 ## Installation
 
