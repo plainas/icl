@@ -14,11 +14,17 @@ function f_run_icl
   end
 end
 
-
-#TODO: check if fish 3, and skip if not
-
 # this will only work for fish 3
-bind \ct f_run_icl
+if fish --version | grep 'version 3'
+  bind \ct f_run_icl
+end
+
+# if you run older versions of fish, you have to define the keybind yourself
+# inside your fish_user_key_bindings function:
+
+# function fish_user_key_bindings
+#   bind \ct f_run_icl
+# end
 
 #===============================================================================
 # END  icl - interactive command library END
