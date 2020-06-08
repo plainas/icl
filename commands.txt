@@ -52,3 +52,14 @@ shuf -i 90-110 -r -n 1000 > file
 # HTTP server on specific port for all file in current directory
 python -m SimpleHTTPServer 9000
 
+# Display the current date in UTC and ISO 8601 format
+date -u +"%Y-%m-%dT%H:%M:%SZ"
+
+# Display the current date as a Unix timestamp (seconds since the Unix epoch)
+date +%s
+
+# Display disk usage
+df
+
+#Display disk usage with human readable units
+df -H

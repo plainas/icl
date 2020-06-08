@@ -1,8 +1,9 @@
 FROM ubuntu
 
-RUN apt update
-RUN apt-get install fish sudo curl zsh -y
+RUN apt-get update --fix-missing
+RUN apt-get install fish sudo curl zsh python3-pip -y
 
+RUN pip3 install termtosvg
 
 RUN adduser --disabled-password --gecos "" somedudeuser
 RUN adduser somedudeuser sudo
