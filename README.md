@@ -89,6 +89,6 @@ curl https://raw.githubusercontent.com/plainas/icl/master/tldr.txt >> ~/.config/
 
 ### TODO
 * accept an url as parameter to load an online library
-* include  and [cheat](https://github.com/cheat/cheat) [eg](https://github.com/srsudar/eg)
+* include [cheat](https://github.com/cheat/cheat) and [eg](https://github.com/srsudar/eg)
 * integrate client to [bropages](http://bropages.org/)
 * Improve TLDR scraper, get ridd of curly brackets around paremeters.
