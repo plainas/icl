@@ -79,13 +79,16 @@ ps aux
 
 ```
 
-### Bonus: icl as a TLDR client
+### Bonus: icl as a [TLDR](https://tldr.sh/) client
 
-The file tldr.txt includes all commands scrapped from tldr repository. If you want to be able to access them using icl, simply place them in your ''commands.txt''. You can do so by running the following command.
+The file `tldr.txt` includes all commands scrapped from tldr repository. If you want to be able to access them using icl, simply place them in your `commands.txt`. You can do so by running the following command.
 
 ```
 curl https://raw.githubusercontent.com/plainas/icl/master/tldr.txt >> ~/.config/icl/commands.txt
 ```
 
-TODO: mention how to install on fish 2
-
+### TODO
+* accept an url as parameter to load an online library
+* include  and [cheat](https://github.com/cheat/cheat) [eg](https://github.com/srsudar/eg)
+* integrate client to [bropages](http://bropages.org/)
+* Improve TLDR scraper, get ridd of curly brackets around paremeters.
