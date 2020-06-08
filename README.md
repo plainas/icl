@@ -21,8 +21,6 @@ Reload your fish config or start a new shell.
 Note:
 Iy you are still using fish 2, yon need to define the keybinding to ''f_run_icl'' yourself.
 
-TODO: surround keybind on if-clause fish 3
-
 
 ### Z shell
 
