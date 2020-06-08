@@ -15,7 +15,7 @@ function f_run_icl
 end
 
 # this will only work for fish 3
-if fish --version | grep 'version 3'
+if fish --version | grep 'version 3' > /dev/null
   bind \ct f_run_icl
 end
 
