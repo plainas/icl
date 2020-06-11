@@ -58,7 +58,7 @@ Just press `Ctrl+t` and start typing.
 
 Pick the command you want by pressing enter. To abort press `Ctrl+C`
 
-## A commands to your cheat sheet
+## Add commands to your cheat sheet
 
 Commmands are stored in `~/.config/icl/commands.txt`
 
@@ -79,11 +79,29 @@ ps aux
 
 ```
 
-### Bonus: icl as a TLDR client
+## Change the keybind
 
-The file tldr.txt includes all commands scrapped from tldr repository. If you want to be able to access them using icl, simply place them in your ''commands.txt''. You can do so by running the following command.
+If you installed `icl` with the one line snippets provided above. The keybind is defined in `~/.config/fish/config.fish` , `~/.bashrc` or `~/.zshrc` depending on which shell you are using. Look for one of the following commands and replace `ctrl+t` with another keybind on your preference.
 
+```shellscript
+# fish
+bind \ct f_run_icl
+
+# zsh
+bindkey ^t w_run_icl
+
+# Bash
+bind '"\C-t":"f_run_icl\n"'
+```
+
+### Bonus: icl as a [TLDR](https://tldr.sh/) client
+The file `tldr.txt` includes all commands scrapped from tldr repository. If you want to be able to access them using icl, simply place them in your `commands.txt`. You can do so by running the following command.
 ```
 curl https://raw.githubusercontent.com/plainas/icl/master/tldr.txt >> ~/.config/icl/commands.txt
 ```
 
+### TODO
+* accept an url as parameter to load an online library
+* include [cheat](https://github.com/cheat/cheat) and [eg](https://github.com/srsudar/eg)
+* integrate client to [bropages](http://bropages.org/)
+* Improve TLDR scraper, get ridd of curly brackets around paremeters.
