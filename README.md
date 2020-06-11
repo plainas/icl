@@ -19,7 +19,7 @@ curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_fish.sh |
 Reload your fish config or start a new shell.
 
 Note:
-Iy you are still using fish 2, yon need to define the keybinding to ''f_run_icl'' yourself.
+If you are still using fish 2, yon need to define the keybinding to ''f_run_icl'' yourself.
 
 
 ### Z shell
@@ -86,6 +86,4 @@ The file tldr.txt includes all commands scrapped from tldr repository. If you wa
 ```
 curl https://raw.githubusercontent.com/plainas/icl/master/tldr.txt >> ~/.config/icl/commands.txt
 ```
-
-TODO: mention how to install on fish 2
 
