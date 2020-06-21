@@ -19,7 +19,7 @@ curl -sSL https://raw.githubusercontent.com/plainas/icl/master/install_fish.sh |
 Reload your fish config or start a new shell.
 
 Note:
-If you are still using fish 2, yon need to define the keybinding to ''f_run_icl'' yourself.
+If you are still using fish 2, you need to define the keybinding to ''f_run_icl'' yourself.
 
 
 ### Z shell
