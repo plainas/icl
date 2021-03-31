@@ -211,6 +211,9 @@ class Icl():
             if self.selected_option_index > 0:
                 self.selected_option_index -= 1
 
+        elif pressed_key == 27:  # Exit on escape
+            raise
+
         elif curses.ascii.isprint(pressed_key): # this also needs to be replaced by something.
             x,y = curses.getsyx()
             self.input_string  = self.input_string + str(chr(pressed_key))
