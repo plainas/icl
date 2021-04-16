@@ -99,6 +99,7 @@ class Icl():
         self.input_string=""
         self.all_entries = get_entries_from_file()
         self.matches = []
+        self.start = 0
         self.selected_option_index = 0
         
         self.screen = curses.initscr()
@@ -143,7 +144,10 @@ class Icl():
 
 
     def _match(self, entry, query):
-        query_words = query.split()
+        
+        # TODO later: smartcase
+        entry=list(map(str.lower, entry))
+        query_words = query.lower().split()  
 
         for word in query_words:
             if word not in entry[0] and word not in entry[1]:
@@ -161,7 +165,7 @@ class Icl():
 
         screen_vertical_real_estate = self._get_vertical_real_estate()
 
-        for idx, match in enumerate(self.matches[:screen_vertical_real_estate]):
+        for idx, match in enumerate(self.matches[self.start:self.start+screen_vertical_real_estate]):
             try:
                 line_number = idx * 2 + 1
                 if self.selected_option_index != idx:
@@ -204,12 +208,21 @@ class Icl():
 
         elif pressed_key == curses.KEY_DOWN:
             screen_vertical_real_estate = self._get_vertical_real_estate()
-            if self.selected_option_index < screen_vertical_real_estate - 1:
+            
+            if self.start+ self.selected_option_index + 1 >= len(self.matches):  # already at the bottom
+                return
+            if self.selected_option_index < screen_vertical_real_estate - 1: # visible page remains same but highlight the next
                 self.selected_option_index += 1
+            
+            else: # move the visible page down by 1 to highlight the next
+                self.start+=1
 
         elif pressed_key == curses.KEY_UP:
             if self.selected_option_index > 0:
                 self.selected_option_index -= 1
+            else:
+                self.start-=min(self.start, 1)  
+            # todo later: scroll wrap
 
         elif pressed_key == 27:  # Exit on escape
             raise
