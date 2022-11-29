@@ -169,11 +169,11 @@ class Icl():
             try:
                 line_number = idx * 2 + 1
                 if self.selected_option_index != idx:
-                    self.screen.addstr(line_number, 0, match[0] ,curses.color_pair(1) | curses.A_BOLD)
-                    self.screen.addstr( line_number +1 , 0, match[1])
+                    self.screen.addstr(line_number, 1, match[0] ,curses.color_pair(1) | curses.A_BOLD)
+                    self.screen.addstr(line_number +1 , 1, match[1])
                 else:
-                    self.screen.addstr(line_number, 0, match[0] ,curses.color_pair(2) | curses.A_BOLD)
-                    self.screen.addstr( line_number +1 , 0, match[1], curses.color_pair(2))
+                    self.screen.addstr(line_number, 1, match[0] ,curses.color_pair(2) | curses.A_BOLD)
+                    self.screen.addstr(line_number +1 , 1, match[1], curses.color_pair(2))
 
                 self.screen.move(0 , 7+ len(query_string))
             except:
